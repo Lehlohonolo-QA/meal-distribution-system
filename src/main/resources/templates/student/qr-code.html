@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Your QR Code</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+
+<div class="container text-center">
+  <h1>Your Meal Collection QR Code</h1>
+
+  <div class="card mx-auto" style="max-width: 400px;">
+    <div class="card-body">
+      <!-- QR Code would be generated here -->
+      <img th:src="@{'/qrcode/' + ${qrCode.code}}" alt="QR Code" class="img-fluid mb-3">
+      <p class="text-muted" th:text="${qrCode.code}"></p>
+      <div class="alert alert-warning">
+        QR Code is valid for one-time use only
+      </div>
+      <p>Expires: <span th:text="${#dates.format(qrCode.expiresAt, 'MMMM dd, yyyy hh:mm a')}"></span></p>
+    </div>
+  </div>
+
+  <a th:href="@{/student/dashboard}" class="btn btn-secondary mt-3">Back to Dashboard</a>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
