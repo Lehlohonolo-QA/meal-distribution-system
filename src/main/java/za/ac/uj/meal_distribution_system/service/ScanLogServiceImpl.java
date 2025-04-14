@@ -1,7 +1,8 @@
-package za.ac.uj.meal_distribution_system.service.impl;
+package za.ac.uj.meal_distribution_system.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import za.ac.uj.meal_distribution_system.model.QRCode;

@@ -15,7 +15,7 @@ import za.ac.uj.meal_distribution_system.service.StudentService;
 @RequestMapping("/admin")
 public class AdminController {
 
-    @Autowired
+    @Autowired(required=true)
     private StudentService studentService;
 
     @GetMapping("/students")

@@ -22,7 +22,7 @@ public class FoodItem {
 
     @ManyToOne
     @JoinColumn(name = "supplier_id")
-    private Supplier supplier;
+    private SupplierEntity supplier;
 
     // Getters and Setters
 }
