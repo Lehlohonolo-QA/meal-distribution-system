@@ -10,8 +10,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@SpringBootTest(classes = {MealDistributionSystemApplication.class},
-        properties = "spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration")
+@SpringBootTest
 @AutoConfigureMockMvc
 class MealDistributionSystemApplicationTests {
     @Autowired
@@ -21,6 +20,7 @@ class MealDistributionSystemApplicationTests {
     void contextLoads() throws Exception {
         // Basic test to verify context loads
         mockMvc.perform(get("/"))
+//        mockMvc.perform(get("/api/health"))
                 .andExpect(status().isOk());
     }
 }
