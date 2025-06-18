@@ -10,7 +10,6 @@ import za.ac.uj.meal_distribution_system.model.Student;
 import za.ac.uj.meal_distribution_system.service.StudentService;
 
 
-
 @Controller
 @RequestMapping("/admin")
 public class AdminController {

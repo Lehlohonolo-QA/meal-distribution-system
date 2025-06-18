@@ -12,7 +12,7 @@
     <div class="card mb-4">
         <div class="card-body">
             <h5 class="card-title">Import Students</h5>
-            <form th:action="@{/admin/students/import}" method="post" enctype="multipart/form-data">
+            <form th:action="@{/admin/students/import}" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <input type="file" name="file" accept=".xlsx,.xls" required>
                 </div>
@@ -25,7 +25,7 @@
         <div class="card-body">
             <h5 class="card-title">Student List</h5>
 
-            <form th:action="@{/admin/students}" method="get" class="mb-3">
+            <form th:action="@{/admin/students}" method="GET" class="mb-3">
                 <div class="input-group">
                     <input type="text" name="search" class="form-control" placeholder="Search...">
                     <div class="input-group-append">
